@@ -181,8 +181,8 @@
         </div>
         <div class="founders__grid">
           <div class="founders__card animate-on-scroll">
-            <div class="founders__avatar">
-              <i class="fa-solid fa-user"></i>
+            <div class="founders__photo" onclick="openLightbox(this)">
+              <img src="images/sekula.jpg" alt="Sekula Popović">
             </div>
             <div class="founders__info">
               <h3>Sekula Popović</h3>
@@ -195,8 +195,8 @@
             </div>
           </div>
           <div class="founders__card animate-on-scroll">
-            <div class="founders__avatar">
-              <i class="fa-solid fa-user"></i>
+            <div class="founders__photo" onclick="openLightbox(this)">
+              <img src="images/branka.jpg" alt="Branka Popović">
             </div>
             <div class="founders__info">
               <h3>Branka Popović</h3>
@@ -209,8 +209,8 @@
             </div>
           </div>
           <div class="founders__card founders__card--highlight animate-on-scroll">
-            <div class="founders__avatar founders__avatar--gold">
-              <i class="fa-solid fa-user"></i>
+            <div class="founders__photo" onclick="openLightbox(this)">
+              <img src="images/marko.jpg" alt="Marko Popović">
             </div>
             <div class="founders__info">
               <h3>Marko Popović</h3>
@@ -310,6 +310,29 @@
     <i class="fa-solid fa-chevron-up"></i>
   </button>
 
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox__close" aria-label="Zatvori"><i class="fa-solid fa-xmark"></i></button>
+    <img src="" alt="" id="lightboxImg">
+  </div>
+
   <script src="script.js"></script>
+  <script>
+    function openLightbox(el) {
+      var img = el.querySelector('img');
+      var lb = document.getElementById('lightbox');
+      document.getElementById('lightboxImg').src = img.src;
+      document.getElementById('lightboxImg').alt = img.alt;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
 </body>
 </html>

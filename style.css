@@ -1035,7 +1035,7 @@ input, textarea, select { font-family: inherit; font-size: inherit; }
   background: var(--white);
   border: 1px solid rgba(0,0,0,0.06);
   border-radius: var(--radius-lg);
-  padding: 40px 30px;
+  overflow: hidden;
   text-align: center;
   transition: all var(--transition);
 }
@@ -1050,22 +1050,106 @@ input, textarea, select { font-family: inherit; font-size: inherit; }
   box-shadow: var(--shadow-gold);
 }
 
-.founders__avatar {
-  width: 80px;
-  height: 80px;
-  background: var(--cream-dark);
+.founders__photo {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.founders__photo::after {
+  content: '\f065';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  background: rgba(0,0,0,0.5);
+  color: var(--white);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.founders__photo:hover::after {
+  opacity: 1;
+}
+
+.founders__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform var(--transition);
+}
+
+.founders__photo:hover img {
+  transform: scale(1.05);
+}
+
+.founders__info {
+  padding: 28px 30px;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.lightbox.active img {
+  transform: scale(1);
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  background: rgba(255,255,255,0.1);
+  color: var(--white);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 20px;
-  font-size: 1.8rem;
-  color: var(--text-light);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.founders__avatar--gold {
-  background: var(--gold-glow);
-  color: var(--gold);
+.lightbox__close:hover {
+  background: rgba(255,255,255,0.2);
 }
 
 .founders__info h3 {
@@ -1543,6 +1627,7 @@ input, textarea, select { font-family: inherit; font-size: inherit; }
 
   /* Founders */
   .founders__grid { grid-template-columns: 1fr; }
+  .founders__photo { height: 300px; }
 
   /* Timeline */
   .timeline__line { left: 20px; }
