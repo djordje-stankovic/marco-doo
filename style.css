@@ -472,15 +472,7 @@ input, textarea, select { font-family: inherit; font-size: inherit; }
 }
 
 .hero__title-accent::after {
-  content: '';
-  position: absolute;
-  bottom: 2px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: var(--gold);
-  opacity: 0.3;
-  border-radius: 2px;
+  display: none;
 }
 
 .hero__subtitle {
@@ -509,17 +501,23 @@ input, textarea, select { font-family: inherit; font-size: inherit; }
 
 .hero__stat { text-align: center; }
 
+.hero__stat-row {
+  height: 3.2rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
 .hero__stat-number {
   font-family: var(--font-heading);
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--gold);
-  display: block;
 }
 
 .hero__stat-plus {
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--gold);
 }
 
@@ -1310,7 +1308,7 @@ input, textarea, select { font-family: inherit; font-size: inherit; }
   gap: 20px;
   margin-bottom: 28px;
   padding-bottom: 20px;
-  border-bottom: 2px solid var(--gold-glow);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
 .founders__bio-avatar {
