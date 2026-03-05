@@ -178,48 +178,139 @@
         <div class="section__header">
           <span class="section__label animate-on-scroll">Ljudi iza firme</span>
           <h2 class="section__title animate-on-scroll">Osnivači i <span class="text-gold">naslednik</span></h2>
+          <p class="section__desc animate-on-scroll">Kliknite na osobu da saznate njenu priču</p>
         </div>
         <div class="founders__grid">
-          <div class="founders__card animate-on-scroll">
+          <div class="founders__card animate-on-scroll" data-founder="sekula">
             <div class="founders__photo" onclick="openLightbox(this)">
               <img src="images/sekula.jpg" alt="Sekula Popović">
             </div>
             <div class="founders__info">
               <h3>Sekula Popović</h3>
-              <span class="founders__role">Suosnivač</span>
-              <p>
-                Vizionar i preduzetnik koji je 1993. godine prepoznao priliku na tržištu
-                gasne opreme. Postavio je temelje MARCO-a zasnovane na kvalitetu i
-                poštenom poslovanju.
-              </p>
+              <span class="founders__role">Osnivač</span>
+              <p>Vizija, iskustvo i strateški razvoj — decenijsko iskustvo koje je oblikovalo kompaniju.</p>
             </div>
+            <div class="founders__read-more"><i class="fa-solid fa-chevron-down"></i> <span class="rm-text">Pročitaj više</span><span class="rm-text-close">Zatvori</span></div>
           </div>
-          <div class="founders__card animate-on-scroll">
+          <div class="founders__card animate-on-scroll" data-founder="branka">
             <div class="founders__photo" onclick="openLightbox(this)">
               <img src="images/branka.jpg" alt="Branka Popović">
             </div>
             <div class="founders__info">
               <h3>Branka Popović</h3>
-              <span class="founders__role">Suosnivačica · Prokurista</span>
-              <p>
-                Oslonac firme od prvog dana. Njena posvećenost organizaciji i
-                administraciji omogućila je stabilan rast MARCO-a kroz sve izazove
-                proteklih decenija.
-              </p>
+              <span class="founders__role">Suosnivač</span>
+              <p>Stub stabilnosti i organizacije kompanije od njenog osnivanja.</p>
             </div>
+            <div class="founders__read-more"><i class="fa-solid fa-chevron-down"></i> <span class="rm-text">Pročitaj više</span><span class="rm-text-close">Zatvori</span></div>
           </div>
-          <div class="founders__card founders__card--highlight animate-on-scroll">
+          <div class="founders__card animate-on-scroll" data-founder="marko">
             <div class="founders__photo" onclick="openLightbox(this)">
               <img src="images/marko.jpg" alt="Marko Popović">
             </div>
             <div class="founders__info">
               <h3>Marko Popović</h3>
-              <span class="founders__role">Direktor · Vlasnik</span>
-              <p>
-                Nova generacija na čelu porodičnog biznisa. Marko nastavlja
-                tradiciju roditelja uz moderan pristup — digitalizacija poslovanja,
-                nove partnerske mreže i vizija za budućnost MARCO-a.
-              </p>
+              <span class="founders__role">Generalni direktor</span>
+              <p>Nova energija i strateška vizija koja spaja porodičnu tradiciju sa modernim tržišnim trendovima.</p>
+            </div>
+            <div class="founders__read-more"><i class="fa-solid fa-chevron-down"></i> <span class="rm-text">Pročitaj više</span><span class="rm-text-close">Zatvori</span></div>
+          </div>
+        </div>
+
+        <!-- Bio panels -->
+        <div class="founders__bio-container" id="bioContainer">
+          <div class="founders__bio-arrow" id="bioArrow"></div>
+
+          <div class="founders__bio" id="bio-marko">
+            <button class="founders__bio-close" onclick="closeBio()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="founders__bio-header">
+              <div class="founders__bio-avatar"><img src="images/marko.jpg" alt="Marko Popović"></div>
+              <div>
+                <h3>Marko Popović</h3>
+                <span class="founders__role">Generalni direktor</span>
+              </div>
+            </div>
+            <div class="founders__bio-content">
+              <div class="founders__bio-section">
+                <p>Na čelo kompanije Marco doo 2018. godine dolazi Marko Popović, donoseći novu energiju i stratešku viziju koja spaja porodičnu tradiciju sa modernim tržišnim trendovima. Njegov dolazak na lidersku poziciju označio je početak nove etape u razvoju firme, usmerene na inovacije i diversifikaciju poslovanja u nove sektore.</p>
+              </div>
+              <div class="founders__bio-section">
+                <h4><i class="fa-solid fa-basketball"></i> Iz vrhunskog sporta u svet biznisa</h4>
+                <p>Pre preuzimanja upravljačke uloge u porodičnom poslu, Marko je izgradio uspešnu profesionalnu košarkašku karijeru. Godine provedene u vrhunskom sportu oblikovale su ga kao lidera koji u biznis prenosi ključne sportske vrednosti: disciplinu, istrajnost i pobednički mentalitet usmeren na kontinuirani napredak tima.</p>
+              </div>
+              <div class="founders__bio-section">
+                <h4><i class="fa-solid fa-flask"></i> Iskorak u nove industrije: Skaska destilerija</h4>
+                <p>Pod Markovim vođstvom, kompanija Marco doo uspešno je iskoračila iz okvira tradicionalnih sektora. Na njegov predlog osnovana je Skaska destilerija doo, koja posluje u vlasništvu Marco doo. Sa vizijom proizvodnje premium pića najvišeg kvaliteta, destilerija je pokrenuta sa jasnim ciljem — osvajanje svetskog tržišta i postavljanje novih standarda u proizvodnji vrhunskih destilata.</p>
+              </div>
+              <div class="founders__bio-section">
+                <h4><i class="fa-solid fa-handshake"></i> Snaga partnerstva i zajednička vizija</h4>
+                <p>U svakodnevnom poslovanju i strateškom vođenju obe firme, važnu ulogu ima Markova supruga, Iva Popović. Njen angažman i podrška u upravljanju ključnim procesima donose dodatnu stabilnost i novu perspektivu razvoju brendova. Zajedničkim snagama, Marko i Iva rade na modernizaciji gasnog sektora u okviru Marco doo i na globalnom pozicioniranju Skaske, čuvajući porodični karakter firme uz primenu najsavremenijih svetskih poslovnih praksi.</p>
+              </div>
+              <div class="founders__bio-highlight">
+                <i class="fa-solid fa-quote-left"></i>
+                Danas, Marko Popović uspešno balansira između očuvanja decenijske stabilnosti i energičnog prodora na nova tržišta, gradeći budućnost kompanije na temeljima poverenja, inovacija i neraskidive saradnje.
+              </div>
+            </div>
+          </div>
+
+          <div class="founders__bio" id="bio-branka">
+            <button class="founders__bio-close" onclick="closeBio()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="founders__bio-header">
+              <div class="founders__bio-avatar"><img src="images/branka.jpg" alt="Branka Popović"></div>
+              <div>
+                <h3>Branka Popović</h3>
+                <span class="founders__role">Suosnivač</span>
+              </div>
+            </div>
+            <div class="founders__bio-content">
+              <div class="founders__bio-section">
+                <p>Branka Popović je stub stabilnosti i organizacije kompanije od njenog osnivanja. Po završetku Ekonomskog fakulteta u Sarajevu, profesionalno iskustvo sticala je u Ljubljanskoj banci i UNIS Sarajevo, gde je ovladala upravljanjem složenim finansijskim procesima.</p>
+              </div>
+              <div class="founders__bio-section">
+                <h4><i class="fa-solid fa-building-columns"></i> Ključna figura u svim fazama razvoja</h4>
+                <p>Kao suosnivač kompanije Marco doo, Branka je ključna figura u svim fazama razvoja — od Kragujevca do strateške selidbe u Novi Sad 2004. godine. U poslovni svet unosi nesvakidašnju smirenost, strpljenje i ljubaznost, osobine koje su omogućile izgradnju dugoročnog poverenja sa klijentima i partnerima.</p>
+              </div>
+              <div class="founders__bio-highlight">
+                <i class="fa-solid fa-quote-left"></i>
+                Njena stručnost i blag, ali odlučan pristup, osigurali su uspešnu tranziciju u gasni sektor, čineći firmu simbolom pouzdanosti i porodičnih vrednosti.
+              </div>
+            </div>
+          </div>
+
+          <div class="founders__bio" id="bio-sekula">
+            <button class="founders__bio-close" onclick="closeBio()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="founders__bio-header">
+              <div class="founders__bio-avatar"><img src="images/sekula.jpg" alt="Sekula Popović"></div>
+              <div>
+                <h3>Sekula Popović</h3>
+                <span class="founders__role">Osnivač</span>
+              </div>
+            </div>
+            <div class="founders__bio-content">
+              <div class="founders__bio-section">
+                <p>Iza kompanije Marco doo stoji decenijsko iskustvo njenog osnivača, Sekula Popovića, čija je profesionalna putanja obeležena radom u vrhunskim industrijskim sistemima i strateškim vizijama koje su oblikovale moderno poslovanje firme.</p>
+                <p>Svoj put Sekula započinje u Sarajevu odmah nakon srednje škole. Uz rad, pokazujući izuzetnu disciplinu, Ekonomski fakultet završava u rekordnom roku od svega 20 meseci, postavljajući temelje za karijeru definisanu efikasnošću i ekonomskom preciznošću.</p>
+              </div>
+              <div class="founders__bio-section">
+                <h4><i class="fa-solid fa-industry"></i> Ekspertiza u industrijskim gigantima</h4>
+                <ul class="founders__bio-list">
+                  <li><strong>PRETIS Vogošća:</strong> Mesto sticanja prvih iskustava u tehnološki najnaprednijim procesima ovog čuvenog industrijskog giganta.</li>
+                  <li><strong>UNIS Sarajevo:</strong> Kao stručnjak čiji su rezultati brzo prepoznati, napreduje do pozicije člana Upravnog odbora cele korporacije.</li>
+                  <li><strong>UNIS Fabrika bicikala:</strong> Upravljanje složenim sistemima proizvodnje dalo mu je neprocenjivo menadžersko iskustvo koje je kasnije postalo temelj sopstvenog biznisa.</li>
+                </ul>
+              </div>
+              <div class="founders__bio-section">
+                <h4><i class="fa-solid fa-rocket"></i> Osnivanje Marco doo i tehnološki doprinos</h4>
+                <p>Sa vizijom o stvaranju sopstvenog preduzeća, Sekula Popović sa suprugom Brankom 1993. godine u Kragujevcu osniva kompaniju Marco doo. Tokom prve decenije, firma se pozicionira kao lider u spoljnoj trgovini bicikala, ali i kao nosilac tehnološkog progresa, uvodeći nove tehnologije u kompanije poput Oriona iz Kragujevca i Planet Bike-a iz Kruševca.</p>
+              </div>
+              <div class="founders__bio-section">
+                <h4><i class="fa-solid fa-fire-flame-curved"></i> Strateška transformacija i gasni sektor</h4>
+                <p>Prekretnica u poslovanju nastupa 2004. godine, kada Marco d.o.o. seli svoje sedište u Novi Sad i pravi strateški zaokret ka gasnom sektoru privrede. Ovaj novi pravac bio je prirodan nastavak oslanjanja na proverene vrednosti i stara partnerstva.</p>
+                <p>U saradnji sa dugogodišnjim poslovnim prijateljem iz vremena UNIS-a, Sejom Gradaščevićem i njegovom kompanijom Fagas doo, Sekula Popović pokreće snažan ciklus osvajanja novih tržišta. Spoj decenijskog poverenja, industrijskog znanja i nove energije u gasnom sektoru omogućio je kompaniji Marco doo da postane prepoznatljiv i pouzdan partner u ovoj vitalnoj privrednoj grani.</p>
+              </div>
+              <div class="founders__bio-highlight">
+                <i class="fa-solid fa-quote-left"></i>
+                Danas, vođen vizijom Sekula Popovića, Marco doo Novi Sad predstavlja simbol stabilnosti i stručnosti, spajajući najbolje iz industrijske tradicije sa savremenim energetskim rešenjima.
+              </div>
             </div>
           </div>
         </div>
@@ -331,8 +422,108 @@
       document.body.style.overflow = '';
     }
     document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'Escape') { closeLightbox(); closeBio(); }
     });
+  </script>
+
+  <script>
+  // Founders bio interaction
+  (function() {
+    var cards = document.querySelectorAll('.founders__card[data-founder]');
+    var container = document.getElementById('bioContainer');
+    var arrow = document.getElementById('bioArrow');
+    var currentBio = null;
+    var mobileInserted = null; // track mobile-inserted bio wrapper
+
+    function isMobile() { return window.innerWidth < 768; }
+
+    function cleanupMobileInsert() {
+      if (mobileInserted) {
+        var bio = mobileInserted.querySelector('.founders__bio');
+        if (bio) {
+          bio.classList.remove('active');
+          bio.style.display = '';
+          // Restore avatar visibility
+          var avatar = bio.querySelector('.founders__bio-header .founders__bio-avatar');
+          if (avatar) avatar.style.display = '';
+          container.appendChild(bio);
+        }
+        mobileInserted.remove();
+        mobileInserted = null;
+      }
+    }
+
+    cards.forEach(function(card) {
+      card.addEventListener('click', function(e) {
+        if (e.target.closest('.founders__photo')) return;
+
+        var founder = card.getAttribute('data-founder');
+        var bioEl = document.getElementById('bio-' + founder);
+        if (!bioEl) return;
+
+        // If clicking same card, close
+        if (currentBio === founder) {
+          closeBio();
+          return;
+        }
+
+        // Deactivate all
+        cards.forEach(function(c) { c.classList.remove('active'); });
+        document.querySelectorAll('.founders__bio').forEach(function(b) {
+          b.classList.remove('active');
+        });
+        cleanupMobileInsert();
+
+        card.classList.add('active');
+        currentBio = founder;
+
+        if (isMobile()) {
+          // Insert bio right after the clicked card
+          var wrapper = document.createElement('div');
+          wrapper.className = 'founders__bio-mobile-wrap';
+          bioEl.classList.add('active');
+          wrapper.appendChild(bioEl);
+          card.insertAdjacentElement('afterend', wrapper);
+          mobileInserted = wrapper;
+
+          // Hide avatar in mobile bio
+          var avatar = bioEl.querySelector('.founders__bio-header .founders__bio-avatar');
+          if (avatar) avatar.style.display = 'none';
+
+          // Animate open
+          wrapper.style.maxHeight = '0';
+          wrapper.style.overflow = 'hidden';
+          wrapper.style.transition = 'max-height 0.5s ease';
+          requestAnimationFrame(function() {
+            wrapper.style.maxHeight = bioEl.scrollHeight + 40 + 'px';
+          });
+        } else {
+          // Desktop: show in shared container below grid
+          bioEl.classList.add('active');
+          container.classList.add('open');
+
+          var gridRect = card.parentElement.getBoundingClientRect();
+          var cardRect = card.getBoundingClientRect();
+          var arrowLeft = (cardRect.left - gridRect.left) + (cardRect.width / 2) - 10;
+          arrow.style.left = arrowLeft + 'px';
+
+          setTimeout(function() {
+            container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }, 200);
+        }
+      });
+    });
+
+    window.closeBio = function() {
+      cards.forEach(function(c) { c.classList.remove('active'); });
+      document.querySelectorAll('.founders__bio').forEach(function(b) {
+        b.classList.remove('active');
+      });
+      cleanupMobileInsert();
+      container.classList.remove('open');
+      currentBio = null;
+    };
+  })();
   </script>
 </body>
 </html>
